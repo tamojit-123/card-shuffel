@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+body {
+    height: 100vh;
+    margin-top: 4em;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    position: relative;
+}
+
+.cards {
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    width: 33.33%;
+    transition: all 400ms ease;
+    background-size: cover;
+    background-position: center;
+}
+
+.cards:hover:not(.active).left {
+    transform: translateX(-50%) rotate(-10deg) scale(0.9);
+}
+
+.cards:hover:not(.active).right {
+    transform: translateX(50%) rotate(10deg) scale(0.9);
+}
+
+.cards.left {
+    transform: translateX(-50%) scale(0.9);
+}
+
+.cards.right {
+    transform: translateX(50%) scale(0.9);
+}
+
+.cards.active {
+    z-index: 5;
+    position: relative;
+}
+
+.cards__inner {
+    position: relative;
+    padding-bottom: 158.8235294118%;
+}
